@@ -1,0 +1,16 @@
+$main-color: #ff8a00;
+
+html {
+  color-scheme: light dark;
+  font-family: system-ui;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+body {
+  display: flex;
+  user-select: none;
+  background: linear-gradient(to right, $main-color, #e52e71);
+}
