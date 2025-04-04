@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ca">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bloc – Cuina Catalana</title>
+    <link rel="stylesheet" href="./styles/categoria.scss" />
+  </head>
+
+  <body>
+    <include src="./src/header.html"></include>
+
+    <main class="categoria-layout container">
+      <section class="hero">
+        <h1>Descobreix la cuina catalana</h1>
+        <p>
+          Receptes, tradició i cultura gastronòmica del territori. Inspira’t i cuina amb essència catalana!
+        </p>
+      </section>
+
+      <div class="content-wrapper">
+        <div class="main-content">
+          <section class="destacats">
+            <div class="cards">
+              <article class="card">
+                <img src="./assets/img/escudella.jpg" alt="Escudella i carn d’olla" />
+                <h3>Escudella i carn d’olla</h3>
+                <p>El plat estrella d’hivern, complet i nutritiu.</p>
+                <a href="detall.html" class="btn">Veure més</a>
+              </article>
+
+              <article class="card">
+                <img src="./assets/img/canelons.jpg" alt="Canelons de Sant Esteve" />
+                <h3>Canelons de Sant Esteve</h3>
+                <p>Una recepta festiva amb gust de tradició.</p>
+                <a href="detall.html" class="btn">Veure més</a>
+              </article>
+
+              <article class="card">
+                <img src="./assets/img/crema.jpg" alt="Crema catalana" />
+                <h3>Crema catalana</h3>
+                <p>Postres amb caràcter i una crosta inoblidable.</p>
+                <a href="detall.html" class="btn">Veure més</a>
+              </article>
+            </div>
+          </section>
+
+          <section class="video-recepta">
+            <h2>Recepta en vídeo</h2>
+            <div class="video-wrapper">
+              <iframe
+                src="https://youtu.be/gWGgCKipf1U"
+                title="Recepta catalana"
+                frameborder="0"
+                allowfullscreen>
+              </iframe>
+            </div>
+          </section>
+        </div>
+
+        <aside class="noticies">
+            <h2>Notícies del bloc</h2>
+            <ul>
+              <li>
+                <a href="https://www.elgourmetcatala.cat/recepta-samfaina-catalana-esloufutcanmironet/">Els secrets de la samfaina</a>
+                <p>Com preparar aquest sofregit tan nostre.</p>
+              </li>
+              <li>
+                <a href="https://www.festacatalunya.cat/articles-mostra-677-cat-fires_tradicionals.htm">Mercats tradicionals del territori</a>
+                <p>Un recorregut pels mercats amb ànima de poble.</p>
+              </li>
+              <li>
+                <a href="https://menjaactuaimpacta.org/blog/aliments-de-proximitat-i-temporada/eat-life-els-22-productes-catalans-reconeguts-amb-distintius-dorigen/">Productes amb Denominació d’Origen</a>
+                <p>Ingredients de proximitat i de qualitat.</p>
+              </li>
+            </ul>
+          </aside>
+      </div>
+    </main>
+
+    <include src="./src/footer.html"></include>
+  </body>
+</html>

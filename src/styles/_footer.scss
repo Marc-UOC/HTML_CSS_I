@@ -1,0 +1,80 @@
+@use 'variables';
+
+.site-footer {
+  background-color: variables.$primary-color;
+  color: white;
+  padding: 1.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+
+  .footer-links {
+    order: -1;
+  }
+
+  .footer-left {
+    order: 1;
+  }
+
+  @media (min-width: variables.$breakpoint-md) {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+
+    .footer-links,
+    .footer-left {
+      order: 0;
+    }
+  }
+
+  .footer-left {
+    .assignatura {
+      margin: 0;
+      font-size: 0.95rem;
+      font-weight: 600;
+    }
+
+    .uoc {
+      margin: 0.25rem 0 0;
+      font-size: 0.9rem;
+      font-style: italic;
+    }
+  }
+
+  .footer-links {
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+  
+      @media (min-width: variables.$breakpoint-md) {
+        justify-content: flex-end;
+      }
+  
+      @media (max-width: variables.$breakpoint-md) {
+        justify-content: center;
+      }
+  
+      li {
+        a {
+          color: white;
+          text-decoration: none;
+          font-weight: 500;
+          transition: background-color 0.3s, color 0.3s;
+          padding: 0.25rem 0.5rem;
+          border-radius: 0.25rem;
+  
+          &:hover,
+          &:focus {
+            background-color: rgba(255, 255, 255, 0.2);
+            color: white;
+          }
+        }
+      }
+    }
+  }
+}

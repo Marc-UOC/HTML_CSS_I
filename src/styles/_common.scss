@@ -1,0 +1,31 @@
+// @use "sass:color";
+@use 'variables';
+// @use 'header';
+
+body {
+    background-color: variables.$background-color;
+    color: variables.$text-color;
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+
+    @media (min-width: variables.$breakpoint-md) {
+        padding: 3rem 2rem;
+    }
+}
+
+.hero {
+    background-color: variables.$card-bg;
+    border-radius: 0.5rem;
+    padding: 2rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }

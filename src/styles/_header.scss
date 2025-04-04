@@ -1,0 +1,59 @@
+@use 'variables';
+
+.site-header {
+  background-color: variables.$primary-color;
+  padding: 1rem 2rem;
+
+  .nav {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2rem;
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      text-decoration: none;
+      color: white;
+    }
+
+    .nav__menu {
+      list-style: none;
+      display: flex;
+      gap: 1rem;
+      margin: 0;
+      padding: 0;
+
+      li {
+        a {
+          color: white;
+          text-decoration: none;
+          font-weight: 500;
+          padding: 0.5rem 0.75rem;
+          border-radius: 0.25rem;
+          transition: background-color 0.2s;
+
+          &:hover {
+            background-color: variables.$highlight-color;
+          }
+
+          &.active {
+            background-color: variables.$highlight-color;
+            font-weight: bold;
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: variables.$breakpoint-sm) {
+    .nav {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .nav__menu {
+      flex-direction: column;
+    }
+  }
+}

@@ -1,13 +1,59 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="ca">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Parcel Vanilla App</title>
-    <link rel="stylesheet" href="style.scss">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cuines del món – Cuina catalana</title>
+    <link rel="stylesheet" href="./styles/index.scss" />
   </head>
+
   <body>
-    <h1>Parcel Vanilla App</h1>
-    <p>Edit <code>src/index.html</code> to get started!</p>
+    <include src="./src/header.html"></include>
+
+    <main class="container">
+      <section class="intro hero">
+        <h1>Descobreix la Cuina Catalana</h1>
+        <p>
+          Benvingut al nostre portal gastronòmic dedicat a la riquesa de la cuina catalana. Aquí trobaràs receptes, història, i tot allò que fa dels nostres plats una experiència única.
+        </p>
+        <a class="btn" href="./categoria.html">Explora les receptes</a>
+      </section>
+
+      <section class="navega">
+        <h2>Explora el lloc</h2>
+        <div class="pages-grid">
+          <article class="link-card">
+            <h3>Bloc</h3>
+            <p>Explora articles sobre la cuina catalana: orígens dels plats, curiositats, ingredients locals i tradicions que donen gust a la nostra cultura.</p>
+            <a href="categoria.html" class="btn">Bloc</a>
+          </article>
+
+          <article class="link-card">
+            <h3>Plat destacat</h3>
+            <p>Consulta la nostra recomanació especial amb imatges, curiositats i vídeo.</p>
+            <a href="detall.html" class="btn">Veure el plat</a>
+          </article>
+
+          <article class="link-card">
+            <h3>Fonts i Crèdits</h3>
+            <p>Consulta les fonts, atribucions i materials utilitzats per construir aquest lloc web.</p>
+            <a href="enllaços.html" class="btn">Anar a enllaços</a>
+          </article>
+        </div>
+      </section>
+
+      <section class="sobre">
+        <h2>La tradició a taula</h2>
+        <p>
+          La cuina catalana és una de les més antigues i documentades d’Europa. Amb influències mediterrànies i respecte pels ingredients de proximitat, és un reflex de la nostra cultura.
+        </p>
+        <p>
+          Amb aquest bloc volem conservar i compartir aquest patrimoni, fent-lo accessible, visual i inspirador.
+        </p>
+      </section>
+
+    </main>
+
+    <include src="./src/footer.html"></include>
   </body>
 </html>
