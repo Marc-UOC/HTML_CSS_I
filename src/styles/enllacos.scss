@@ -1,0 +1,58 @@
+@use 'sass:color';
+@use 'variables';
+@use 'common';
+@use 'header';
+@use 'footer';
+
+.links-layout {
+  .links-section {
+    padding: 2rem 1rem;
+    background: color.adjust(variables.$background-color, $lightness: 5%);
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+
+    h1,
+    h2 {
+      color: variables.$highlight-color;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+
+    p {
+      color: variables.$text-color;
+      line-height: 1.6;
+      max-width: 700px;
+      margin: 0 auto 1.5rem;
+      text-align: center;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0 auto 2rem;
+      max-width: 700px;
+
+      li {
+        margin-bottom: 0.75rem;
+        text-align: left;
+
+        a {
+          color: variables.$highlight-color;
+          text-decoration: none;
+          transition: color 0.2s ease;
+
+          &:hover,
+          &:focus {
+            color: variables.$highlight-color;
+            text-decoration: underline;
+            outline: none;
+          }
+        }
+
+        em {
+          font-style: italic;
+        }
+      }
+    }
+  }
+}
