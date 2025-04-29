@@ -7,7 +7,6 @@
 .categoria-layout {
   .hero {
     text-align: center;
-    margin-bottom: 2rem;
 
     h1 {
       font-size: 2.25rem;
@@ -82,22 +81,19 @@
     h2 {
       text-align: center;
       color: variables.$highlight-color;
-      margin-bottom: 1.5rem;
+      margin-bottom: 1rem;
     }
 
     .cards {
       display: grid;
+      grid-template-columns: 2fr 1fr;
+      grid-template-rows: repeat(2, auto);
       gap: 2rem;
+      grid-template-areas:
+        "card1 card2"
+        "card1 card3";
 
-      @media (min-width: variables.$breakpoint-sm) {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      @media (min-width: variables.$breakpoint-md) {
-        grid-template-columns: repeat(3, 1fr);
-      }
-
-      .card {
+      article.card {
         background-color: variables.$card-bg;
         border-radius: 0.5rem;
         padding: 1rem;
@@ -111,39 +107,38 @@
           border-radius: 0.5rem;
         }
 
-        h3 {
-          color: variables.$primary-color;
-          margin-bottom: 0.5rem;
-        }
-
-        p {
-          font-size: 0.95rem;
-          color: variables.$text-color;
-          margin-bottom: 1rem;
-        }
+        h3 { color: variables.$primary-color; margin-bottom: 0.5rem; }
+        p  { font-size: 0.95rem; color: variables.$text-color; margin-bottom: 1rem; }
 
         .btn {
+          display: inline-block;    // <-- aquí
+          padding: 0.5rem 1rem;
+          margin: 0;            // ara sí respectarà el marge vertical
           background-color: variables.$highlight-color;
           color: white;
-          padding: 0.5rem 1rem;
           border-radius: 0.5rem;
           text-decoration: none;
+          transition: background-color 0.2s;
 
           &:hover {
             background-color: color.adjust(variables.$highlight-color, $lightness: -10%);
           }
         }
       }
+
+      article.card:nth-child(1) { grid-area: card1; }
+      article.card:nth-child(2) { grid-area: card2; }
+      article.card:nth-child(3) { grid-area: card3; }
     }
   }
 
   .video-recepta {
     text-align: center;
-    margin-bottom: 3rem;
 
     h2 {
-      margin-bottom: 1rem;
+      font-size: 1.75rem;
       color: variables.$primary-color;
+      margin: 0 0 1rem 0;
     }
 
     .video-wrapper {
@@ -151,14 +146,14 @@
       padding-bottom: 56.25%;
       height: 0;
       overflow: hidden;
+      border-radius: 0.5rem;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 
       iframe {
         position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        border-radius: 0.5rem;
+        top: 0; left: 0;
+        width: 100%; height: 100%;
+        border: 0;
       }
     }
   }
