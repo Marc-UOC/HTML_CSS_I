@@ -1,0 +1,158 @@
+@use 'sass:color';
+@use 'variables';
+@use 'common';
+@use 'header';
+@use 'footer';
+
+.detall-layout {
+    .hero {
+      position: relative;
+      height: 60vh;
+      min-height: 300px;
+      overflow: hidden;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  
+      .hero-bg {
+        position: absolute;
+        top: 0; left: 0; right: 0; bottom: 0;
+  
+        .featured-image {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+  
+        .hero-overlay {
+          position: absolute;
+          top: 0; left: 0; right: 0; bottom: 0;
+          background: rgba(0, 0, 0, 0.3);
+        }
+      }
+  
+      .hero-content {
+        position: relative;
+        z-index: 1;
+        text-align: center;
+       
+  
+        h1 {
+          font-size: 4rem;
+          color: variables.$highlight-color;
+          text-shadow: 
+          0 0 1px rgba(170, 158, 158, 0.8),
+          0 0 1px rgba(255, 255, 255, 0.8);
+        }
+        .intro {
+          max-width: 600px;
+          color: white;
+          margin: 0 auto;
+          font-size: 1.9rem;
+          text-shadow: 
+          0 0 1px rgba(0, 0, 0, 0.8),
+          0 0 1px rgba(0, 0, 0, 0.8);
+        }
+      }
+    }
+  
+    .content {
+      &.container {
+        margin: 0 auto;
+        padding: 0 2rem;
+      }
+  
+      .container-block {
+        background: color.adjust(variables.$background-color, $lightness: 5%);
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        padding: 1rem;
+        border-radius: 0.5rem;
+      }
+  
+      .text-content {
+        p {
+          color: variables.$text-color;
+          line-height: 1.7;
+        }
+      }
+  
+      .image-gallery {
+        display: grid;
+        gap: 1rem;
+  
+        @media (min-width: variables.$breakpoint-md) {
+          grid-template-columns: repeat(3, 1fr);
+        }
+  
+        img {
+          width: 100%;
+          height: auto;
+          border-radius: 0.5rem;
+          box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+          transition: transform 0.3s ease;
+  
+          &:hover, &:focus {
+            transform: translateY(-3px);
+          }
+        }
+      }
+
+    .video-detail {
+      h2 {
+        font-size: 1.75rem;
+        color: variables.$primary-color;
+        margin-bottom: 0.75rem;
+        text-align: center;
+      }
+
+      .video-wrapper {
+        position: relative;
+        padding-bottom: 56.25%;
+        height: 0;
+        overflow: hidden;
+        border-radius: 0.5rem;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+        iframe {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          border: 0;
+        }
+      }
+    }
+  }
+
+  .recipe-info {
+    margin: 0 auto;
+    
+    .info-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 5rem;
+      margin: 0;
+      padding: 0;
+
+      li {
+        font-size: 1rem;
+        color: variables.$text-color;
+        position: relative;
+        padding: 0 1rem;
+
+        strong {
+          color: variables.$highlight-color;
+        }
+      }
+
+      @media (min-width: variables.$breakpoint-md) {
+        flex-direction: row;
+      }
+    }
+  }
+
+  a.btn,
+  img:focus {
+    box-shadow: 0 0 0 3px rgba(variables.$highlight-color, 0.5);
+  }
+}

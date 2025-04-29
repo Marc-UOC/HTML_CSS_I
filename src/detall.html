@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ca">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Detall – Escudella i carn d’olla</title>
+        <link rel="stylesheet" href="./styles/detall.scss" />
+    </head>
+
+    <body>
+        <include src="./src/header.html"></include>
+
+        <main class="detall-layout container">
+            <section class="hero">
+                <div class="hero-bg">
+                    <img
+                    class="featured-image"
+                    src="./assets/img/escudella.jpg"
+                    alt="Escudella i carn d’olla ben servida"
+                    loading="lazy"
+                    />
+                    <div class="hero-overlay"></div>
+                </div>
+                <div class="hero-content container">
+                    <h1>Escudella i carn d’olla</h1>
+                    <p class="intro">
+                        L’autèntic plat d’hivern català, ric en sabors i molt reconfortant.
+                    </p>
+                </div>
+            </section>
+
+            <section class="recipe-info container-block">
+                <ul class="info-list">
+                    <li>
+                    <strong>Temps de preparació:</strong><br>
+                    1 h 30 min
+                    </li>
+                    <li>
+                    <strong>Ingredients principals:</strong><br>
+                    cigrons, carn de porc, naps, pilota
+                    </li>
+                    <li>
+                    <strong>Data de la recepta:</strong><br>
+                    25 de desembre
+                    </li>
+                </ul>
+            </section>  
+
+            <section class="content container">
+                <div class="text-content container-block">
+                    <p>
+                        L’escudella de Nadal, també anomenada “sopa de galets”, és el plat festiu
+                        per excel·lència del dia de Nadal a Catalunya. Amb orígens que es remunten
+                        a l’Edat Mitjana, aquesta recepta tradicional reflecteix la cuina pagesa,
+                        combinant ingredients senzills per crear un àpat complet i reconfortant que
+                        reuneix tota la família al voltant de la taula.
+                    </p>
+                    <p>
+                        La seva preparació comença amb un brou elaborat a partir de quatre carns:
+                        porc, vedella, pollastre i xai—combinades amb botifarra, ossos i un sofregit
+                        suau. A la cocció s’hi afegeixen verdures de temporada (col, naps, patates i
+                        pastanagues) i la pilota, una gran mandonguilla de carn picada condimentada
+                        amb all, julivert i espècies. Finalment, s’incorporen els galets, aquestes
+                        típiques pastes en forma d’espiral que aporten cos i textura a la sopa.
+                    </p>
+                    <p>
+                        Tradicionalment, es serveix primer el brou amb galets ben calent, i a
+                        continuació es presenta en un plat separat la carn d’olla amb les verdures
+                        i la pilota tallada a rodanxes. Aquest servei en dues parts, distingit
+                        com a “escudella de galets” i “carn d’olla”, simbolitza l’abundància
+                        nadalenca i permet gaudir de cada element amb la seva temperatura i
+                        textura òptimes.
+                    </p>
+                </div>
+
+                <div class="image-gallery container-block">
+                    <img
+                        src="./assets/img/escudella-llegum.jpg"
+                        alt="Preparació del sofregit per a l'escudella"
+                        loading="lazy"
+                    />
+                    <img
+                        src="./assets/img/escudella-carn-dolla.jpg"
+                        alt="Pilota feta per a l'escudella"
+                        loading="lazy"
+                    />
+                    <img
+                        src="./assets/img/escudella-catalana.jpg"
+                        alt="Plat d'escudella i carn d'olla servit"
+                        loading="lazy"
+                    />
+                </div>
+
+                <div class="video-detail">
+                    <h2>Vídeo: Com preparar Escudella i carn d’olla</h2>
+                    <div class="video-wrapper">
+                        <iframe
+                        src="https://www.youtube.com/embed/tWcfIwWumQE"
+                        title="Vídeo de recepta d'Escudella i carn d'olla"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen
+                    ></iframe>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <include src="./src/footer.html"></include>
+    </body>
+</html>
