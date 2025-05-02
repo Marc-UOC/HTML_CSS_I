@@ -1,24 +1,37 @@
 <!DOCTYPE html>
 <html lang="ca">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Cuines del món – Cuina catalana</title>
-    <link rel="stylesheet" href="./styles/index.scss" />
+    <link rel="stylesheet" href="./styles/index.scss"/>
   </head>
-
   <body>
     <include src="./src/header.html"></include>
-
     <main class="container">
+      <section class="intro-graphic">
+        <div class="flag-with-hole">
+          <picture>
+            <!-- <source srcset="./assets/img/senyera.jpg?as=avif" type="image/avif" /> -->
+            <source srcset="./assets/img/senyera.jpg?as=webp&width=800" type="image/webp" class="flag"/>
+            <img src="./assets/img/senyera.webp" alt="test image" class="flag"/>
+          </picture>
+          <svg class="pot" width="240" height="140" viewBox="0 0 200 120" aria-hidden="true">
+            <g class="steam">
+              <path d="M50 80 C45 60 55 40 50 20" stroke="#322C2B" stroke-width="4" fill="none" class="steam-line"/>
+              <path d="M100 80 C95 60 105 40 100 20" stroke="#322C2B" stroke-width="4" fill="none" class="steam-line"/>
+              <path d="M150 80 C145 60 155 40 150 20" stroke="#322C2B" stroke-width="4" fill="none" class="steam-line"/>
+            </g>
+            <rect x="30" y="80" width="140" height="30" fill="#322C2B"/>
+            <ellipse cx="100" cy="80" rx="70" ry="20" fill="#322C2B"/>
+          </svg>
+        </div>
+      </section>
       <section class="intro hero">
         <h1>Descobreix la Cuina Catalana</h1>
-        <p>
-          Benvingut al nostre portal gastronòmic dedicat a la riquesa de la cuina catalana. Aquí trobaràs receptes, història, i tot allò que fa dels nostres plats una experiència única.
-        </p>
+        <p>Benvingut al nostre portal gastronòmic dedicat a la riquesa de la cuina catalana. Aquí trobaràs receptes, història, i tot allò que fa dels nostres plats una experiència única.</p>
         <a class="btn" href="./categoria.html">Explora les receptes</a>
       </section>
-
       <section class="navega">
         <h2>Explora el lloc</h2>
         <div class="pages-grid">
@@ -27,13 +40,11 @@
             <p>Explora articles sobre la cuina catalana: orígens dels plats, curiositats, ingredients locals i tradicions que donen gust a la nostra cultura.</p>
             <a href="categoria.html" class="btn">Bloc</a>
           </article>
-
           <article class="link-card">
             <h3>Plat destacat</h3>
             <p>Consulta la nostra recomanació especial amb imatges, curiositats i vídeo.</p>
             <a href="detall.html" class="btn">Veure el plat</a>
           </article>
-
           <article class="link-card">
             <h3>Fonts i Crèdits</h3>
             <p>Consulta les fonts, atribucions i materials utilitzats per construir aquest lloc web.</p>
@@ -41,19 +52,21 @@
           </article>
         </div>
       </section>
-
       <section class="sobre">
         <h2>La tradició a taula</h2>
-        <p>
-          La cuina catalana és una de les més antigues i documentades d’Europa. Amb influències mediterrànies i respecte pels ingredients de proximitat, és un reflex de la nostra cultura.
-        </p>
-        <p>
-          Amb aquest bloc volem conservar i compartir aquest patrimoni, fent-lo accessible, visual i inspirador.
-        </p>
+        <div class="image-wrap">
+          <picture>
+            <source srcset="./assets/img/escudella-400.webp" media="(max-width: 600px)">
+            <source srcset="./assets/img/escudella-800.webp" media="(min-width: 601px)">
+            <img src="./assets/img/escudella-800.webp" alt="Escudella i carn d’olla" />
+          </picture>
+          
+          <!-- <img src="./assets/img/escudella.jpg" alt="Escudella catalana"/> -->
+        </div>
+        <p>La cuina catalana és una de les més antigues i documentades d’Europa. Amb influències mediterrànies i respecte pels ingredients de proximitat, és un reflex de la nostra cultura.</p>
+        <p>Amb aquest bloc volem conservar i compartir aquest patrimoni, fent-lo accessible, visual i inspirador.</p>
       </section>
-
     </main>
-
     <include src="./src/footer.html"></include>
   </body>
 </html>

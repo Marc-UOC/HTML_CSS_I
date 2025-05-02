@@ -13,12 +13,19 @@
         <main class="detall-layout container">
             <section class="hero">
                 <div class="hero-bg">
-                    <img
-                    class="featured-image"
-                    src="./assets/img/escudella.jpg"
-                    alt="Escudella i carn d’olla ben servida"
-                    loading="lazy"
-                    />
+                    <picture>
+                        <source
+                          srcset="./assets/img/escudella-vertical.webp"
+                          media="(max-width: 600px)"
+                          type="image/webp"
+                        />
+                        <source
+                          srcset="./assets/img/escudella-wide.webp"
+                          media="(min-width: 601px)"
+                          type="image/webp"
+                        />
+                        <img src="./assets/img/escudella-wide.webp" alt="Paella catalana" />
+                    </picture>
                     <div class="hero-overlay"></div>
                 </div>
                 <div class="hero-content container">
@@ -76,21 +83,18 @@
                 </div>
 
                 <div class="image-gallery container-block">
-                    <img
-                        src="./assets/img/escudella-llegum.jpg"
-                        alt="Preparació del sofregit per a l'escudella"
-                        loading="lazy"
-                    />
-                    <img
-                        src="./assets/img/escudella-carn-dolla.jpg"
-                        alt="Pilota feta per a l'escudella"
-                        loading="lazy"
-                    />
-                    <img
-                        src="./assets/img/escudella-catalana.jpg"
-                        alt="Plat d'escudella i carn d'olla servit"
-                        loading="lazy"
-                    />
+                    <picture>
+                        <source srcset="./assets/img/escudella-llegum.jpg?as=webp&width=800" type="image/webp" />
+                        <img src="./assets/img/senyera.webp" alt="Preparació del sofregit per a l'escudella" loading="lazy"/>
+                    </picture>
+                    <picture>
+                        <source srcset="./assets/img/escudella-carn-dolla.jpg?as=webp&width=800" type="image/webp" />
+                        <img src="./assets/img/escudella-carn-dolla.webp" alt="Pilota feta per a l'escudella" loading="lazy"/>
+                    </picture>
+                    <picture>
+                        <source srcset="./assets/img/escudella-catalana.jpg?as=webp&width=800" type="image/webp" />
+                        <img src="./assets/img/escudella-catalana.webp" alt="Plat d'escudella i carn d'olla servit" loading="lazy"/>
+                    </picture>
                 </div>
 
                 <div class="video-detail">
